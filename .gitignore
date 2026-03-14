@@ -4,5 +4,4 @@ __pycache__/
 .venv/
 .uv/
 .ipynb_checkpoints/
-outputs/
 .DS_Store
