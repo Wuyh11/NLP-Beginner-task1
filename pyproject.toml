@@ -1,0 +1,39 @@
+[project]
+name = "nlp-beginner-task1"
+version = "0.1.0"
+description = "FudanNLP NLP-Beginner Task-1: 基于机器学习的文本分类"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas>=2.2.0",
+    "numpy>=1.26.0",
+    "scikit-learn>=1.4.0",
+    "torch>=2.2.0",
+    "matplotlib>=3.8.0",
+    "tqdm>=4.66.0",
+]
+
+[project.scripts]
+task1-train = "textcls.train:main"
+task1-exp = "textcls.experiments:run_default_experiments"
+
+[build-system]
+requires = ["hatchling>=1.24.0"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [
+    "jupyter>=1.0.0",
+    "ipykernel>=6.29.0",
+    "ruff>=0.6.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/textcls"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]

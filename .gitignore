@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+*.so
+.venv/
+.uv/
+.ipynb_checkpoints/
+outputs/
+.DS_Store
